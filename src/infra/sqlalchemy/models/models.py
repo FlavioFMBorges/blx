@@ -1,7 +1,9 @@
 from sqlalchemy import Column, Integer, String, Float, Boolean
-from src.infra.sqlachemy.config.database import Base
+from src.infra.sqlalchemy.config.database import Base
 
-class Produto():
+class Produto(Base):
+    __tablename__ = 'produto'  #está na documentacao do fast
+
 
     id = Column(Integer, primary_key=True, index=True)
     nome =  Column(String)
